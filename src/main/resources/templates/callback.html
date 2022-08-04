@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+    <script>
+            const parsedHash = new URLSearchParams(window.location.hash.substring(1));
+            window.location.href = `/home?token=${parsedHash.get('token_type')} ${parsedHash.get('access_token')}`
+    </script>
+</head>
+<body>
+    <div>Your code</div>
+    <div>You successfully logined</div>
+</body>
+</html>
